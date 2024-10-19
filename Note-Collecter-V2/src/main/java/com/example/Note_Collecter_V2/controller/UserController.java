@@ -1,5 +1,4 @@
 package com.example.Note_Collecter_V2.controller;
-
 import com.example.Note_Collecter_V2.customeStatesCode.SelectedUserAndNoteErrorStatus;
 import com.example.Note_Collecter_V2.dto.UserStates;
 import com.example.Note_Collecter_V2.dto.impl.UserDTO;

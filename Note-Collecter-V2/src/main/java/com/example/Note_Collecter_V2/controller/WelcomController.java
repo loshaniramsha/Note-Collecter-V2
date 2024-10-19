@@ -1,5 +1,4 @@
 package com.example.Note_Collecter_V2.controller;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

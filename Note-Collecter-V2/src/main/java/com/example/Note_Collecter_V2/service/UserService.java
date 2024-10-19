@@ -4,6 +4,7 @@ package com.example.Note_Collecter_V2.service;
 
 import com.example.Note_Collecter_V2.dto.UserStates;
 import com.example.Note_Collecter_V2.dto.impl.UserDTO;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
 
@@ -13,4 +14,5 @@ public interface UserService {
     UserStates getUser(String userId);
     void deleteUser(String userId);
     void updatUser(String userId, UserDTO userDTO);
+    UserDetailsService userDetailsService();
 }

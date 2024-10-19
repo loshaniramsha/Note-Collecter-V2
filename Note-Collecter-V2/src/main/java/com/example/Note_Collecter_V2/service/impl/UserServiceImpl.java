@@ -12,6 +12,7 @@ import com.example.Note_Collecter_V2.util.Mapping;
 import jakarta.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -76,6 +77,12 @@ public class UserServiceImpl implements UserService {
             tmpUser.get().setProfilepic(userDTO.getProfilepic());
             userDAO.save(tmpUser.get());
         }
+    }
+
+    @Override
+    public UserDetailsService userDetailsService() {
+        return username -> userDAO.findAllByEmail(username)
+                .orElseThrow(()-> new UserNoteFoundException("User Not Found"));
     }
 }
 
